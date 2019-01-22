@@ -1,0 +1,78 @@
+body{
+    		
+    		
+    		background-image: linear-gradient(242.04deg,#1CD881 -66.12%, #313A5B 111.11%);
+    	}
+   ul {font-family: Raleway;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgba(0,0,0,0.42);
+}
+li a{font-size: 28px;
+  text-decoration: none;
+  color: white;
+  display: block;
+  padding: 8px;
+  
+  width: 100%;
+}
+li a:hover {font-size: 28px;
+  text-decoration: none;
+  background-color: teal;
+  color: white;
+  display: block;
+  padding: 8px;
+  
+  width: 100%;
+}
+img{ margin:10px 10px 10px 10px ;
+	padding: 10px 10px 10px 10px;
+	height:60%;
+	width:85%;
+}
+h1{
+	margin:60px 20px 20px 130px ;
+	padding: 60px 20px 20px 130px;
+	color: white;
+font-weight: bold;}
+h5{color: white;
+}
+legend{
+  font-family: raleway;
+}
+  .form-container
+  {   border: solid;
+    margin: 10px 10px 10px 10px;
+    padding: 10px 10px 10px 10px;
+    width: 60%;
+    background-color: rgba(0,0,0,0.5);
+    -webkit-box-shadow: -1px 4px 26px 11px;
+  
+    }
+    .form-group
+    {   margin: 10px 0px 10px 10px;
+      padding: 10px 0px 20px 20px;
+      width: 87%;
+      color: white;
+      border-radius: 5%;
+ }
+    legend{
+      text-align: center;
+      color: white;
+      font-size: 24px;
+    }
+    button{ width: 80%;
+      
+    }
+        .align{
+text-align:right;
+}
+    a{
+      text-decoration: none;
+      color: white;
+    }
+}
+
+
