@@ -75,7 +75,7 @@ def news(request):
     news = database.child("news").get()
     for i in news.each():
         newslist.append(i.val())
-    return render(request, 'newspage2.html', {'newsList': newslist })
+    return render(request, 'newspage.html', {'newsList': newslist })
 
 def signOut(request):
     del request.session['uid']
