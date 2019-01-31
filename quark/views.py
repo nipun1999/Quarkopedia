@@ -47,6 +47,7 @@ authy_api= AuthyApiClient("8x9UksoV9DMM6T1fzMD1tFxayRLrkQnX")
 
 user_id = None
 user = None
+ph = None
 
 def signIn(request):
 
