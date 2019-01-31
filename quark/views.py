@@ -111,7 +111,7 @@ def ranking(request):
 
     ranklist = []
     rank = database.child("ranking").get()
-    if rank is None:
+    if rank.val() is None:
         return render(request, 'ranking.html', {'error' : 'T'})
 
     for i in rank.each():
