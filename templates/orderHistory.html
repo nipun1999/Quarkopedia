@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block links %}
+  <title>History</title>
+  <link rel="stylesheet" href="{% static 'css/cardview.css' %}">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+  <style type="text/css">
+    .text-center{
+        
+        color:white;
+        width:80%;
+        margin: 5px;
+    }
+ a {
+  color: white;
+}
+  </style>
+{% endblock %}
+
+{% block content %}
+
+<center>
+<div class="text-center" style="background-color: teal;">
+  <br>    
+  <h3 style="font-family: Raleway;"> Order History </h3>
+  <br>
+</div>
+</center>
+
+<br>
+<!--
+<center>
+    {% for i in newList %}
+    <div class="card">
+            <div class="row">
+                <div class="col-lg-7">
+                    <h5><b>Title</b></h5>
+                    <h6>Branch</h6>
+                </div>
+                <div class="col-lg-3">
+                    <p class="text-white">10%</p>
+                </div>
+                <div class="col-lg-2">
+                    <p class="card-text">4</p>
+                </div>
+            </div>
+    </div>
+    {% endfor %}
+</center>
+-->
+
+{% for i in newList %}
+<center>
+  <div class="card" style="background-color: #DCDCDC;"><br>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-4" align="left"> 
+              {% if i.type == 'buy' %}
+                <button type="button" class="btn btn-success">{{i.type}}</button>
+              {% else %}
+                <button type="button" class="btn btn-danger">{{i.type}}</button>
+              {% endif %}
+        </div>
+          <div class="col-lg-6"> </div>
+            <div class="col-lg-2"> 
+              <h5> Price : {{ i.orderPrice }} </h5>
+            </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6" align="left">
+          <b><h4>{{i.name}}</h4></b>
+        </div>
+        <div class="col-lg-4"></div>
+        <div class="col-lg-2">
+          <h4>Qty : {{ i.orderQty }} </h4>
+        </div>
+      </div>
+
+      <br>
+    </div>
+  </div>
+</center>
+{% endfor%}
+
+<form method="POST" action="{% url 'history'%}">
+{% csrf_token %}
+  <div class="row">
+    <div class="col-lg-1"></div>
+    <div class="col-lg-3" align="left">
+      {% if p >= 1 %}  
+      <button class="btn btn-danger" name='prev' value='{{p}}'>PREVIOUS</button>&nbsp;&nbsp;&nbsp;
+      {% endif %}
+    </div>
+    <div class="col-lg-6"></div>  
+    <div class="col-lg-2">
+      {% if n >= 1%}
+      <button class="btn btn-success" name='next' value='{{n}}'>NEXT</button>
+      {% endif %}
+    </div>
+  </div>
+</form>
+
+{% endblock %}

@@ -1,0 +1,171 @@
+{% extends 'base.html' %}
+
+{% block content%}
+ <style type="text/css">
+    .text-center{
+        background-color: teal;
+        color:white;
+        width:70%;
+        padding: 1%;
+        margin: 5px;
+    }
+
+    .card{
+      background-color: #DCDCDC;
+    }
+
+    .white{
+      background-color: black;
+      color: white;
+    }
+    .table{
+    width:70%;
+    }
+
+
+  </style>
+<title> Stock Prices </title>
+
+<center>
+
+<div class="text-center">
+  <h1 style="color:white;font-family: Raleway;"> Stock Prices </h1>
+  <h4 style="color:white; font-family: Raleway;"> PRICES UPDATE EVERY 10 SEC  </h4>
+</div>
+
+<br>
+<table class="table">
+  <thead class="white">
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Price</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr style="background-color: #CCDBDC;">
+      <th scope="row">Neural Networks</th>
+      <td class="resCs01"> </td>
+    </tr>
+
+    <tr style="background-color: #CCDBDC;">
+      <th scope="row">Computer Architecture</th>
+      <td class="resCs02"> </td>
+    </tr>
+
+    <tr style="background-color: #CCDBDC;">
+      <th scope="row">Communication systems</th>
+      <td class="resEce01"> </td>
+    </tr>
+
+    <tr style="background-color: #CCDBDC;">
+      <th scope="row">Microelectronic circuits</th>
+      <td class="resEce02"> </td>
+    </tr>
+
+    <tr style="background-color: #CCDBDC;">
+      <th scope="row">Analog electronics</th>
+      <td class="resEee01"> </td>
+    </tr>
+
+    <tr style="background-color: #CCDBDC;">
+      <th scope="row">Power electronics</th>
+      <td class="resEee02"> </td>
+    </tr>
+
+    <tr style="background-color: #CCDBDC;">
+      <th scope="row">Recombinant DNA technology</th>
+      <td class="resBio01"> </td>
+    </tr>
+
+    <tr style="background-color: #CCDBDC;">
+      <th scope="row">Bioinformatics</th>
+      <td class="resBio02"> </td>
+    </tr>
+
+    <tr style="background-color: #CCDBDC;">
+      <th scope="row">Process design principles</th>
+      <td class="resChem01"> </td>
+    </tr>
+
+    <tr style="background-color: #CCDBDC;">
+      <th scope="row">Heat transfer</th>
+      <td class="resChem02"> </td>
+    </tr>
+
+    <tr style="background-color: #CCDBDC;">
+      <th scope="row">Fluid mechanics</th>
+      <td class="resMech01"> </td>
+    </tr>
+
+    <tr style="background-color: #CCDBDC;">
+      <th scope="row">Machine design and drawing</th>
+      <td class="resMech02"> </td>
+    </tr>
+
+    <tr style="background-color: #CCDBDC;">
+      <th scope="row">Algebra 1</th>
+      <td class="resMath01"> </td>
+    </tr>
+
+    <tr style="background-color: #CCDBDC;">
+      <th scope="row">Elementary real analysis</th>
+      <td class="resMath02"> </td>
+    </tr>
+
+    <tr style="background-color: #CCDBDC;">
+      <th scope="row">Macro-economics</th>
+      <td class="resEco01"> </td>
+    </tr>
+
+    <tr style="background-color: #CCDBDC;">
+      <th scope="row">Applied econometrics</th>
+      <td class="resEco02"> </td>
+    </tr>
+
+    <tr style="background-color: #CCDBDC;">
+      <th scope="row">Analog and ditigal VLSI design</th>
+      <td class="resEni01"> </td>
+    </tr>
+
+    <tr style="background-color: #CCDBDC;">
+      <th scope="row">Industrial instrumentation and control</th>
+      <td class="resEni02"> </td>
+    </tr>
+
+  </tbody>
+  
+</table>
+</center>
+<script>
+        (function worker() {
+          $.ajax({
+            url: "{% url 'stockPrices' %}",
+            success: function(data) {
+              $('.resCs01').html(data['cs01']);
+              $('.resCs02').html(data['cs02']);
+              $('.resEce01').html(data['ece01']);
+              $('.resEce02').html(data['ece02']);
+              $('.resEee01').html(data['eee01']);
+              $('.resEee02').html(data['eee02']);
+              $('.resBio01').html(data['bio01']);
+              $('.resBio02').html(data['bio02']);
+              $('.resChem01').html(data['chem01']);
+              $('.resChem02').html(data['chem02']);
+              $('.resMech01').html(data['mech01']);
+              $('.resMech02').html(data['mech02']);
+              $('.resMath01').html(data['math01']);
+              $('.resMath02').html(data['math02']);
+              $('.resEco01').html(data['eco01']);
+              $('.resEco02').html(data['eco02']);
+              $('.resEni01').html(data['eni01']);
+              $('.resEni02').html(data['eni02']);
+            },
+            complete: function() {
+              setTimeout(worker, 10000);
+            }
+          });
+        })();
+</script>
+{% endblock %}
+

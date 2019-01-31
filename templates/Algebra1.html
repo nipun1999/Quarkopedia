@@ -1,0 +1,213 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load staticfiles %}
+  <title>Algebra1</title>
+  
+ <style>
+ table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;}
+  
+  th
+  {
+    padding: 50px;
+  }
+  img {
+  max-width: 95%;
+  height: auto;
+}
+#mybtn {
+  
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  padding: 2px;
+  width: 50px;
+  height: 50px;
+  border-radius: 4px;
+}
+
+#mybtn:hover {
+  background-color: #555;
+}
+ </style>
+<body>
+    <button onclick="topFunction()" id="mybtn" title="Go to top"><i class="fa fa-angle-double-up" style="font-size:36px"></i></button>
+    
+    <div class="col-lg-12">
+        <div class="jumbotron text-center" style="background-color: teal; color: white;">
+                <h2>M.SC. MATHEMATICS</h2>
+            </div>
+            
+                <OL style="margin-left: 25px;">
+                <h3><li><b>ALGEBRA 1</b>:-</li></h3>
+                <ol type="a">
+                    <LI>Stock Prices: 360.30</LI>
+                    <li>Volume traded- 26,59,906</li>
+                </ol>
+                <ol type="a">
+                    <div class="section">
+                    <li><big><u>Course IC-</u></big><br>
+                    <h4><b> Dr. Kriti Paul</b></h4>
+                    <h4><i> Qualifications:</i></h4>
+                    <ul type="circle">
+                        <li>Ph.D. from department of mathematics, Indian Institute of Science, Bangalore-560012. </li>
+                        <li>M.Sc. in pure mathematics, University of Calcutta, Kolkata, India.</li>
+                        <li>B.Sc in Mathematics(Major), Chemistry and Physics,Vidyasagar College, Kolkata. University of Calcutta, Kolkata, India.</li>
+                    
+                    </ul>
+                    <h4><i>About the faculty:</i></h4>
+                    <ul type="circle">
+                    <li>She is interested to work on Algebra, Number theory and their applications. She likes to teach and interact with the students.</li>
+                    </ul>
+                    <h4><i>About:</i></h4>
+                    <ul type="circle">
+                    <li>Algebra 1 is the second math course in high school and will guide you through among other things expressions, systems of equations, functions, real numbers, inequalities, exponents, polynomials, radical and rational expressions.</li>    
+                     </ul></li>
+                     <li>The below graphs show the past one year's price data.</li>
+                     <img src="{% static 'image/gail.PNG'%}" width="800px" height="600px">
+                     <img src="{% static 'image/gail candlestick.PNG'%}" width="800px" height="600px">
+                    <li><big><u>Placements:</u></big>
+                        <div style="overflow-x:auto;">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Year</th>
+                                    <th>Total Registered</th>
+                                    <th>% Placed</th>
+                                    <th>Average CTC(LPA)</th>
+                                    <th>Median CTC(LPA)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2014</td>
+                                    <td>23</td>
+                                    <td>56.52%</td>
+                                    <td>6.78</td>
+                                    <td>7.00</td>
+                                </tr>
+                                <tr>
+                                    <td>2015</td>
+                                    <td>31</td>
+                                    <td>58.06%</td>
+                                    <td>7.85</td>
+                                    <td>8.03</td>
+                                </tr>
+                                <tr>
+                                        <td>2016</td>
+                                        <td>43</td>
+                                        <td>58.14%</td>
+                                        <td>9.11</td>
+                                        <td>9.38</td>
+                                </tr>
+                                <tr>
+                                        <td>2017</td>
+                                        <td>47</td>
+                                        <td>63.83%</td>
+                                        <td>9.93</td>
+                                        <td>10.24</td>
+                                </tr>
+                                <tr>
+                                        <td>2018</td>
+                                        <td>53</td>
+                                        <td>66.04%</td>
+                                        <td>10.83</td>
+                                        <td>11.02</td>
+                                </tr>
+
+                            </tbody>
+                        </table></li>
+                        </div>
+                        <li><big><u>Average CG:</u></big>
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Year</th>
+                                        <th>Average CG</th>
+                                       
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>2014</td>
+                                        <td>6.19</td>
+
+                                        
+                                    </tr>
+                                    <tr>
+                                            <td>2015</td>
+                                            <td>6.23</td>
+                                    </tr>
+                                    <tr>
+                                            <td>2016</td>
+                                            <td>6.87</td>
+    
+                                            
+                                    </tr>
+                                    <tr>
+                                        <td>2017</td>
+                                        <td>6.57</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2018</td>
+                                        <td>6.23</td>
+                                    </tr>
+                                    
+                                    
+                                    
+
+                                </tbody>
+                            </li>
+                        </table>
+                    </li>
+                </ol>
+                </li>
+                    
+                    
+                
+                        </li>
+                
+                </li>
+
+                    </li>
+                </ol>
+               
+                </li>
+            </ol>
+
+          </div>
+          
+            
+          </div>
+        
+      </div>
+<script type="text/javascript">
+    
+    window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("mybtn").style.display = "block";
+  } else {
+    document.getElementById("mybtn").style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+</script>
+
+      {% endblock %}

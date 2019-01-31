@@ -1,0 +1,181 @@
+﻿{% extends 'base.html' %}
+
+{% block content %}
+{% load staticfiles %}
+  <title>HeatTransfer</title>
+  
+ <style>
+ table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;}
+  
+  th
+  {
+    padding: 50px;
+  }
+  img {
+  max-width: 95%;
+  height: auto;
+}
+#mybtn {
+  
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  padding: 2px;
+  width: 50px;
+  height: 50px;
+  border-radius: 4px;
+}
+
+#mybtn:hover {
+  background-color: #555;
+}
+
+ </style>
+<body>
+ <button onclick="topFunction()" id="mybtn" title="Go to top"><i class="fa fa-angle-double-up" style="font-size:36px"></i></button>
+
+    <div class="col-lg-12">
+        <div class="jumbotron text-center" style="background-color: teal; color: white;">
+  <h2>ELECTRONICS AND COMMUNICATION ENGINEERING</h2>  
+</div>
+  <OL style="margin-left: 25px;">
+  <h3> <LI><b>MICROELECTRONIC CIRCUITS</b>:-</LI></h3>
+	  <ol type="a">
+	  <li>Stock price:- 931.00</li>
+	  <li>Volume traded:-4917511</li>
+      <li>Course IC:-</li>
+	  <h4><b>Dr. Akanksha Singh</b></h4>
+	  <h5>Qualifications</h5>
+	  <ul style="list-style-type:circle">
+	  <li>B.Tech (Electrical Engineering, IIT Delhi)</li>
+	  <li>Ph.D. (Electronics and Telecommunication Engineering, Jadavpur University)</li>
+	  <li>Post Doctoral (Wet Electronics, University of Bath, U.K.; Current Mode Circuits, University College of London, U.K.)</li>
+	  </ul>
+	  <h5>Awarded</h5>
+	  <ul style="list-style-type:circle">
+	  <li>Ashis K. Chakraborty(Awarded in 2005); Title: "Development of an alternative robust algorithm for robotic vision".</li>
+	  <li>Dayanand Deen(Awarded in 2010); Title: "Development of sensors and microcontroller based system for monitoring of machine condition and powered support for Longwall mine".</li>
+	  <li>A. Srinivasulu (Awarded in 2010); Topic: "Some new current conveyor based sinusoidal oscillator and waveform generators".</li>
+	  <li>M. Goswami(Awarded in 2012); Title: "Offset and noise cancellation suitable for biomedical and other low power signal recording".</li>
+	  <li>Aloke Sahi(Awarded in 2015); Title: "Studies on multiplier circuits& its VLSI implementation".</li>
+	  <li>M. R. Narayanan(Awarded in 2016); Title : “Performance improvement and parameter optimization of SOI-MOSFET devices”.</li>
+	  </ul>
+	  <li>About:-</li>
+	  <ul style="list-style-type:circle">
+	  <li><p>Microelectronics is a branch of electronics that deals with the miniaturization of electronic circuits and components. Devices, equipment, or circuits are produced using the methods of microelectronics.</p></li>
+	  </ul>
+	  <li>The below graphs show the past one year's price data.</li>
+    <img src="{% static 'image/titan.png' %}" width="800px" height="600px">
+    <img src="{% static 'image/titan candlestick.png' %}" width="800px" height="600px">
+      <li>Placement:-</li>
+      <div style="overflow-x:auto;">
+	  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Year</th>
+        <th>Total Registered</th>
+		<th>Percentage Placed</th>
+		<th>Average CTC(LPA)</th>
+		<th>Median CTC(LPA)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>2014</td>
+        <td>24</td>
+		<td>54.16%</td>
+		<td>6.23</td>
+		<td>6.93</td>
+      </tr>
+	  <tr>
+        <td>2015</td>
+        <td>32</td>
+		<td>50.00%</td>
+		<td>7.89</td>
+		<td>7.98</td>
+      </tr>
+	  <tr>
+        <td>2016</td>
+        <td>41</td>
+		<td>51.21%</td>
+		<td>9.34</td>
+		<td>8.30</td>
+      </tr>
+	  <tr>
+        <td>2017</td>
+        <td>40</td>
+		<td>57.50%</td>
+		<td>9.77</td>
+		<td>10.24</td>
+      </tr>
+	  <tr>
+        <td>2018</td>
+        <td>49</td>
+		<td>65.30%</td>
+		<td>10.75</td>
+		<td>11.22</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  <li>Average CG:-</li>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Year</th>
+        <th>Avreage CG</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>2014</td>
+        <td>7.34</td>
+      </tr>
+	  <tr>
+        <td>2015</td>
+        <td>7.58</td>
+      </tr>
+	  <tr>
+        <td>2016</td>
+        <td>7.46</td>
+	  <tr>
+        <td>2017</td>
+        <td>7.72</td>
+      </tr>
+	  <tr>
+        <td>2018</td>
+        <td>7.73</td>
+      </tr>
+    </tbody>
+  </table>
+  </ol>
+  </OL>
+  </div>
+<script type="text/javascript">
+    window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("mybtn").style.display = "block";
+  } else {
+    document.getElementById("mybtn").style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+</script>
+  {% endblock %}

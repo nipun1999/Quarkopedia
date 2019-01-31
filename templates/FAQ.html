@@ -1,0 +1,205 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>FAQ</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<style>
+        body{
+            background-image: white;
+        }
+        .piyush{
+            background-color: rgba(0,0,0,0.9);
+            margin: 0%;
+            padding: 0%;
+
+        }
+        .piyush h2{
+                height: 100px;
+                text-align:center;
+                padding: 2%;
+        }
+        .panel{
+            background-color: rgba(0,0,0,0.5);
+        }
+        </style>
+<body >
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+   
+    <ul class="nav navbar-nav">
+      <li style="float: left;"><img src="{% static 'image/logo.png' %}" style="height: 45px; width: 220px;"></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="col-sm-8 col-sm-offset-2">
+<div class="piyush">
+
+<center style="background-color: teal; margin-top: 3.5em;">
+  <h2 style="color: white;padding-top: 1.25em;">FREQUENTLY ASKED QUESTIONS</P> 
+</center>
+
+</div>
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+    <div class="panel">
+        <div class="panel-heading" role="tab" id="heading1" style="background-color: #DCDCDC;">
+            <h4 class="panel-title" >
+                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="false" aria-controls="collapse1" >
+                    <p>Why do I play this game?</p>
+                </a>
+            </h4>
+        </div>
+        <div id="collapse1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading1">
+            <div class="panel-body">
+                <p style="color: white">The objective of the players is to make the highest returns on their portfolio. Player's portfolios are measured against other players in real time for each game; at the end of that game, the winners are those who have the highest returns relative to the other participants. The leading Traders can win exciting prizes.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="panel">
+        <div class="panel-heading" role="tab" id="heading2"style="background-color: #DCDCDC;">
+            <h4 class="panel-title" >
+                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                        <p>How do I buy and sell shares/stocks?</p>
+                </a>
+            </h4>
+        </div>
+        <div id="collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2">
+            <div class="panel-body">
+                    <p  style="color: white;">On the trading screen, search and select a particular stock/company you want to trade, enter the quantity you want to buy/sell. Enter the limit price if it’s not a market order and place the order.
+                    </p>
+            </div>
+        </div>
+    </div>
+    <div class="panel">
+        <div class="panel-heading" role="tab" id="heading3"style="background-color: #DCDCDC;">
+            <h4 class="panel-title">
+                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                        <p >On what basis can I choose the preferred share to go for? What prior knowledge is required before playing the stock trading game?</p>
+                </a>
+            </h4>
+        </div>
+        <div id="collapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3">
+            <div class="panel-body">
+                    <p  style="color: white">You can choose the stocks as per your understanding and knowledge of the market. Tips from other players and experts may be taken as advice.Only the basic understanding of the market is sufficient to play this game.</p>
+            </div>
+        </div>
+    </div>
+    <div class="panel">
+        <div class="panel-heading" role="tab" id="heading4" style="background-color: #DCDCDC;">
+            <h4 class="panel-title" >
+                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                        <p>How much virtual money do I get while playing a game?</p>
+                </a>
+            </h4>
+        </div>
+        <div id="collapse4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading4">
+            <div class="panel-body">
+                    <p  style="color: white">Initially, you get Rs.10 Lakh virtual money.
+                    </p>
+            </div>
+        </div>
+    </div>
+    <div class="panel">
+        <div class="panel-heading" role="tab" id="heading5" style="background-color: #DCDCDC;">
+            <h4 class="panel-title">
+                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                        <p >What is stop loss?</p>
+                </a>
+            </h4>
+        </div>
+        <div id="collapse5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading5">
+            <div class="panel-body">
+                    <p >An order with a stop loss is one placed with a 'trigger price'. It is placed to minimize the losses and the order can be either for a purchase or a sale.</p>
+            </div>
+        </div>
+    </div>
+    <div class="panel">
+        <div class="panel-heading" role="tab" id="heading6" style="background-color: #DCDCDC;">
+            <h4 class="panel-title">
+                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                        <p >My buying/selling order is not getting placed.</p>
+                </a>
+            </h4>
+        </div>
+        <div id="collapse6" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading6">
+            <div class="panel-body">
+                    <p style="color: white">Please check for the following, if:
+                        <br>- The volume you want to Buy is NOT more than 1/3rd of the total volume in the market.
+                        <br>- The volume you want to Sell is NOT more than 1/6th of the total volume in the market.
+                        <br>- You have sufficient balance to place the buy order.
+                        <br>- You have any pending orders that has reserved your cash balance.
+                        <br>- You are trying to trade penny stocks. According to the new rules, stocks priced below a certain amount, say for e.g. Rs. 10, cannot be traded at all.
+                       </p>
+            </div>
+        </div>
+    </div>
+    <div class="panel">
+        <div class="panel-heading" role="tab" id="heading7" style="background-color: #DCDCDC;">
+            <h4 class="panel-title" >
+                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse7" aria-expanded="false" aria-controls="collapse7">
+                        <p >When is my cash book entry updated? I am having problems with my cash book updation.</p>
+                </a>
+            </h4>
+        </div>
+        <div id="collapse7" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading7">
+            <div class="panel-body">
+                    <p style="color: white">Your Cash book gets updated immediately after the execution of a trade. In case it doesn't, kindly recheck if your trade has been executed successfully. If problem persists, please notify us.</p>
+            </div>
+        </div>
+    </div>
+    <div class="panel">
+        <div class="panel-heading" role="tab" id="heading8" style="background-color: #DCDCDC;">
+            <h4 class="panel-title" >
+                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse8" aria-expanded="false" aria-controls="collapse8">
+                        <p>My rank and profit is not getting reflected in the Ranks page.</p>
+                </a>
+            </h4>
+        </div>
+        <div id="collapse8" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading8">
+            <div class="panel-body">
+                    <p  style="color: white">Rank and profit details get updated at the end of the day's session, i.e. after 4 pm. You can check your positions at that time.</p>
+            </div>
+        </div>
+    </div>
+    <div class="panel">
+        <div class="panel-heading" role="tab" id="heading9" style="background-color: #DCDCDC;">
+            <h4 class="panel-title">
+                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse9" aria-expanded="false" aria-controls="collapse9">
+                        <p>Prizes and Rewards.</p>
+                </a>
+            </h4>
+        </div>
+        <div id="collapse9" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading9">
+            <div class="panel-body">
+                    <p style="color: white">The winner of the games may win prizes and rewards. Those who are eligible to win the prizes need to update their profile and provide valid address details for communication. In case they fail to provide the details, they stand to forego the prize. Quarkopedia is a no obligation free stock trading game platform.
+                        Quarkopedia reserves the right to withdraw call prizes and rewards at any point of time without prior intimation.
+                        </p>
+            </div>
+        </div>
+    </div>
+    <div class="panel">
+        <div class="panel-heading" role="tab" id="heading10" style="background-color: #DCDCDC;">
+            <h4 class="panel-title" >
+                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse10" aria-expanded="false" aria-controls="collapse10">
+                        <p>Can I change my email id of my Quarkopedia account?</p>
+                </a>
+            </h4>
+        </div>
+        <div id="collapse10" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading10">
+            <div class="panel-body">
+                    <p style="color: white">The email id with which you register at Quarkopedia is a unique id with which you access your account. You can not change your mail id directly. In case you want to change it due to unavoidable circumstances, please send us a mail for 'Request for change of email id' at .</p>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>
