@@ -17,6 +17,8 @@ config = {
     'messagingSenderId': "794989305019"
 }
 
+DEFAULT_BAL=1000000
+
 stockIdMap = {
     'cs01' : { 'name' : 'Neural Networks', 'industry' : 'Computer Science'},
     'cs02' : { 'name' : 'Computer Architecture', 'industry' : 'Computer Science'},
