@@ -217,6 +217,8 @@ def portfolio(request):
     stocks = database.child("users").child(user_id).child("stockInfo").get() 
     #Stocks is a dictionary of dictionaies
     
+    if stocks is None:
+        return render(request, 'portfolio.html')
 
     for i in stocks.each():
         #temp is a dictionary
