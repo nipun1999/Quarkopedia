@@ -247,7 +247,7 @@ def trade(request):
     if user_id is None:
         return redirect(signIn)
 
-    marketActive = database.child('marketActive').get().val()
+    marketActive = database.child('marketStatus').get().val()
 
     if marketActive != 'True':
         return redirect(marketClosed)
