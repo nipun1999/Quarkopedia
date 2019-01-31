@@ -8,6 +8,8 @@ from collections import OrderedDict
 from authy.api import AuthyApiClient
 from django.conf import settings
 
+DEFAULT_BAL = 1000000
+
 config = {
 	'apiKey': "AIzaSyAqsYNzM3h74CDciLhKvQXaph5-VcdeG-4",
     'authDomain': "quark-o-pedia.firebaseapp.com",
