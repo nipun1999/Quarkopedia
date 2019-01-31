@@ -188,7 +188,7 @@ def signUp(request):
                 user=auth.create_user_with_email_and_password(email,passw)
                 uid = user['localId']
                 data={'name':name,'email':email,'phone': phone, 'college':college,'city':city,'accBal': DEFAULT_BAL, 'rank': 0,'user_verify':"No",'userVal':DEFAULT_BAL}
-                database.child("users").child(uid).set(data)
+                database.child("users").child(user_id).set(data)
                 auth.send_email_verification(user['idToken'])
                 return render(request,"verification.html")
         message="could not create account"
@@ -539,7 +539,7 @@ def otp(request):
         if verification.ok():
             request.session['isverified']=True
             message="otp verified"
-            database.child("users").child(uid).update({'user_verify' :'Yes'})
+            database.child("users").child(user_id).update({'user_verify' :'Yes'})
             return render(request,'signIn.html')
         else:       
             return render(request,'otp.html')      
