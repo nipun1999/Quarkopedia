@@ -1,20 +1,55 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title> Portfolio </title>
-</head>
-<body>
-    <ul>
-        {% for i in purchasedStocksList %}
-        <li> 
-            <b>{{ i.name }}</b>
-            <li>Purchased Price = {{ i.purchasedPrice }}</li>
-            <li>Quantity        = {{ i.quantity }}</li>
-            <li>Industry        = {{ i.industry }}</li>
-            <li>change          = {{ i.change}} </li>
-        </li>
-        {% endfor %}
-    </ul>
+{% extends 'base.html' %}
+{% load staticfiles %}
 
-</body>
-</html>
+{% block links %}
+  <link rel="stylesheet" href="{% static 'css/portfolioStyles.css' %}">
+  <title> Portfolio </title>
+
+   <style type="text/css">
+    .text-center{
+        background-color: rgba(0,128,128,0.8);
+        color:white;
+        width:70%;
+        padding: 2%;
+        margin: 5px;
+    }
+  </style>
+{% endblock %}
+
+{% block content %}
+  <div class="container">
+  <center>
+    <div class="text-center">
+        <h2> Current Portfolio </h2>
+        <h4> Refresh the page for current changes </h4> 
+    </div>
+    <br>
+        {% for i in purchasedStocksList %}
+            <div class="card" style="margin-bottom: 15px">
+                <div class="row" >
+                    <div class="col-lg-7">
+                        <h5><b>{{ i.name }}</b></h5>
+                        <h6>{{ i.industry }}</h6>
+                    </div>
+                    {% if i.change > 0 %}
+                    <div class="col-lg-3 bgcg">
+                            <p class="text-white">{{ i.change }}%</p>
+                    </div>
+                    {% elif i.change < 0 %}
+                    <div class="col-lg-3 bgcr">
+                            <p class="text-white">{{ i.change }}%</p>
+                    </div>
+                    {% else %}
+                    <div class="col-lg-3 bgcn">
+                            <p class="text-white">{{ i.change }}%</p>
+                    </div>
+                    {% endif %}    
+                    <div class="col-lg-2">
+                        <p class="card-text">{{ i.totalQty }}</p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </center> 
+    </div>
+{% endblock %}

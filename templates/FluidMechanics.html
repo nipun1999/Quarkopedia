@@ -1,0 +1,175 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load staticfiles %}
+  <title>FluidMechanics
+  </title>
+ <style>
+ table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;}
+  
+  th
+  {
+    padding: 50px;
+  }
+  img {
+  max-width: 95%;
+  height: auto;
+}
+#mybtn {
+  
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  padding: 2px;
+  width: 50px;
+  height: 50px;
+  border-radius: 4px;
+}
+
+#mybtn:hover {
+  background-color: #555;
+}
+
+ </style>
+<body>
+<button onclick="topFunction()" id="mybtn" title="Go to top"><i class="fa fa-angle-double-up" style="font-size:36px"></i></button>
+
+<div class="col-lg-12">
+  <div class="jumbotron text-center" style="background-color: teal; color: white;">
+  <h2>MECHANICAL ENGINEERING</h2>
+ 
+</div>
+ 
+  <OL style="margin-left: 25px;">
+    <h3> <LI><b>Fluid Mechanics </b>:-</LI></h3>
+    <ol type="a">
+    <li>Stock price:- 758.25</li>
+    <li>Volume traded:- 14,99,975</li>
+      <li>Course IC:-</li><h4><b>DR. Aditya Singh</b></h4>
+    <h5>Qualifications</h5>
+    <ul style="list-style-type:circle">
+    <li>B.E. degree from Punjab University, Jalandhar in 2000.</li>
+    <li>M.E. degree in Manufacturing Systems Engineering from Birla Industry of Technology and Science(BITS), Pilani, Rajasthan, India, in 2002.</li>
+      <li>Ph.D. degree from BITS Pilani in 2013.</li>
+      <li>She has interests in nanomaterial synthesis and characterization, electrochemical energy storage and conversion devices.</li>
+      <li>His research work has appeared in leading International Journals and Conferences of repute namely Journal of Manufacturing Technology Management (Emerald), IEEE International Conference on Industrial Engineering and Engineering Management, International Conference of Indian Subcontinent Decision Sciences Institute, National Conference on Recent Advances in Manufacturing at SVNIT, Surat.
+        </li>
+      <li>He is currently teaching Production Techniques, Production Planning and Control and Engineering Graphics. His current areas of research include Production Engineering and Industrial Management.</li>
+    </ul>
+    <h5>About:</h5>
+    <ul type="circle"><li>Fluid mechanics. Fluid mechanics is the branch of physics concerned with the mechanics of fluids (liquids, gases, and plasmas) and the forces on them. It has applications in a wide range of disciplines, including mechanical, civil, chemical and biomedical engineering, geophysics, astrophysics, and biology.</li></ul>
+    <li>The below graphs show the past one year's price data.</li>
+    <img src="{% static 'image/UPL.PNG'%}" width="800px" height="600px">
+    <img src="{% static 'image/UPL candlestick.PNG'%}" width="800px" height="600px">
+    <li>Placement:-</li>
+    <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Year</th>
+        <th>Total Registered</th>
+        <th>%Placed</th>
+    <th>Average CTC(LPA)</th>
+    <th>Median CTC(LPA)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>2014</td>
+        <td>23  </td>
+    <td>60.86%</td>
+    <td>6.58</td>
+    <td>7.50</td>
+      </tr>
+    <tr>
+        <td>2015</td>
+        <td>31</td>
+    <td>64.51%</td>
+    <td>7.55</td>
+    <td>8.53</td>
+      </tr>
+    <tr>
+        <td>2016</td>
+        <td>43</td>
+    <td>65.11%</td>
+    <td>9.51</td>
+    <td>9.58</td>
+      </tr>
+    <tr>
+        <td>2017</td>
+        <td>47</td>
+    <td>72.08%</td>
+    <td>9.83</td>
+    <td>10.24</td>
+      </tr>
+    <tr>
+        <td>2018</td>
+        <td>53</td>
+    <td>74.81%</td>
+    <td>10.53</td>
+    <td>11.22</td>
+      </tr>
+    </tbody>
+  </table>
+  <li>Average CG:-</li>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Year</th>
+        <th>Avreage CG</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>2014</td>
+        <td>7.5</td>
+      </tr>
+    <tr>
+        <td>2015</td>
+        <td>7.68</td>
+      </tr>
+    <tr>
+        <td>2016</td>
+        <td>7.9</td>
+    <tr>
+        <td>2017</td>
+        <td>8.07</td>
+      </tr>
+    <tr>
+        <td>2018</td>
+        <td>8.45</td>
+      </tr>
+    </tbody>
+  </table>
+  </ol>
+  </OL>
+
+
+
+</div>
+<script type="text/javascript">
+    window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("mybtn").style.display = "block";
+  } else {
+    document.getElementById("mybtn").style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+</script>
+{% endblock %}

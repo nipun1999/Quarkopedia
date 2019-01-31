@@ -1,30 +1,102 @@
-{% if messg %}
-    <h1>{{messg}}</h1>
-{% endif %}
+{% load staticfiles %}
+
 <!DOCTYPE html>
 <html lang="en">
+
+<html>
 <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="{% static 'css/signup.css' %}">
+<style>
+      h4{
+  color: white;
+  font-family: Raleway;
+  text-align: center;
+}
+img{
+    height:60px;
+    width:220px;
+}
+</style>
 </head>
 <body>
-<form action="{% url 'signup' %}" method="post">
+    <ul>
+<li style="float: left;"><b><a href="{% url 'signin' %}"><img src="{% static 'image/logo.png' %}"></b></a></li>
+ <li style="float: right; font-family: Helvetica;margin-top: 6px;"><a href="{% url 'FAQ' %}" target="_blank">FAQ</a></li>
+  <li style="float: right; font-family: Helvetica;margin-top: 6px;"><a href="{% url 'About' %}" target="_blank">About </a></li>
+  
+  
+</ul>
+
+<div class="row">
+<div class="col-lg-7">
+  <h1>"Stocks don't move up<br>they are moved"</h1>
+<img src="{% static 'image/back.png' %}" id="main_image" class="mainimage">
+</div>
+<div class="col-lg-4"><br><br><br><br>
+<form class="form-container " action="{% url 'signup' %}" method="post">
     {% csrf_token %}
-    Name:
-    <input type="text" name="name"><br><br>
-    Email :
-    <input type="email" name="email"><br><br>
-    Password:
-    <input type="password" name="pass"><br><br>
-    Gender:
-    <input type="radio" name="gender" value="male"> Male
-    <input type="radio" name="gender" value="female"> Female
-    <input type="radio" name="gender" value="other"> Other <br><br>
-     Phone:
-    <input type="number" name="phone"><br><br>
-    College:
-    <input type="text" name="college"><br><br>
-    City:
-    <input type="text" name="city"><br><br>
-    <input type="submit" value="signup">
-</form>
+    <center><img src="{% static 'image/boy.png' %}" alt="" class="user"></center><br><br><b>
+    <legend><center>Sign Up</center></legend>
+        <div class="form-group">
+            <label for="username">Name :</label>
+            <input type="text" name="name" class="form-control" placeholder="Name" required>
+            </div>
+        
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" name="email" class="form-control" placeholder="Email Id (Use BITS Email if BITSIAN)"required>
+            </div>
+        
+        <div class="form-group">
+            <label for="password">Password :</label>
+            <input type="password" name="pass" class="form-control" placeholder="Password(Min 6 charachters long)"required>
+            
+        </div>
+            <div class="form-group">
+            <label for="password">Confirm Password :</label>
+            <input type="password" name="conf_pass" class="form-control" placeholder="Password(Min 6 charachters long)"required>
+            
+        </div>
+                
+        <div class="form-group">
+            <label for="phone">Contact :</label>
+           <input type="tel" name="phone" class="form-control" placeholder="Phone number"required>
+                    </div>
+                    <div class="form-group ml-3 mr-3">
+            <label for="username">College :</label>
+            <input type="text" name="college" class="form-control" placeholder="College"required>
+            </div>
+            
+        <div class="form-group">
+            <label for="city">City :</label>
+            <input type="text" name="city" class="form-control" placeholder="City"required>
+            </div>
+            <div class="col-sm-11">
+                    <center>
+                        <button class="btn btn-success ">Sign Me Up</button></center>
+                        <br>
+            </div>
+                    <br>
+                <br>    
+    </form>
+    
+</div>
+</div>
+<footer><h4>A DoCW Original<br><br><a href="{% url 'Disclaimer' %}" target="_blank" style="color: white;"> Disclaimer</a></h4></footer>
+{% if message %}
+    <script type="text/javascript">alert('{{ message }}');</script>
+{% endif %}
+
 </body>
 </html>

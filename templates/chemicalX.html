@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Chemical X </title>
+</head>
+<body>
+    {% if msg %}
+        <h1> {{ msg }}</h1>
+    {% endif %}
+    <form method="POST" action="{% url 'chemicalX'%}">
+        {% csrf_token %}
+        <button type="submit" value="1" name="option"> Start Sort </button>
+    </form>
+</body>
+</html>

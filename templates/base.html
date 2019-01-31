@@ -2,101 +2,145 @@
 <!DOCTYPE html>
 <html>
 <head>
-    {% block head-meta %}
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    {% endblock %}
-    {% block head-css %}
-    <!-- Bootstrap CSS CDN -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-  
-
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-<link rel="stylesheet" href="{% static 'css/nav.css' %}">
-{% endblock %}
-
-
-</head>
-  <style type="text/css">
-        
-
-    </style>
-
-
-<body>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet prefetch" href="https://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.6.3/css/all.css' integrity='sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/' crossorigin='anonymous'>
+  <link rel="stylesheet" href="{% static 'css/base.css' %}">
      
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  {% block links %}
+  {% endblock %}
+</head>
  
-<div id="content" style="background-color: rgba(0,0,0,0.42);">
-    <nav class="navbar fixed-top navbar-light " style="background-color: rgba(0,0,0,0.42);">
-        <div class="container-fluid" >
+<body>
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
 
-            <button type="button" id="sidebarCollapse" class="btn btn-info" >
-                <i class="fas fa-align-left"></i>
-                <span >Quarkopedia</span>
-            </button>
-                <ul class>
+<div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
+  
+  <button class="w3-bar-item w3-button w3-xlarge"
+  onclick="w3_close()" style="color: black;"><i class="fa fa-close"></i> Close</button>
+ 
+  <ul id="accordion" class="accordion">
+    
+    <div class="w3-hover-teal">
+      <li> <a href="{% url 'news' %}"> <div class="link"><i class="far fa-newspaper"></i>News</div> </a> </li>
+    </div>
 
-             <li style="float: right;"><a href="#">FAQ</a></li>
-            <li style="float: right;"><a href="#">About Us</a></li>
-           </ul>
-        </div>
-    </nav>
-
-</div>
-
-    <div class="wrapper">
-    <!-- Sidebar -->
-    <nav id="sidebar">
-        <div class="sidebar-header">
-            <h3>My Profile</h3>
-        </div>
-
-        <ul class="list-unstyled components">
-            
-            
-            <li><a href="#">About</a></li>
-            <li><a href="#">News</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Stock Research</a></li>
-            <li><a href="#">Trade</a></li>
-            <li><a href="#">Rankings</a></li>
-            <li><a href="#">Profile</a></li>
-            <li><a href="#">Sign Out</li>
+    <div class="w3-hover-teal">
+      <li> 
+        <div class="link"><i class="fa fa-money"></i>Stock<i class="fa fa-chevron-down"></i></div>
+        <ul class="submenu" style="background-color: teal; font-color:white">
+          <li><a href="{% url 'stockpages' %}"> Info</a></li>
+          <li><a href="{% url 'stockPrices' %}"> Prices</a></li>
+          <li><a href="{% url 'trade' %}">Trade</a></li>
+          <li><a href="{% url 'history' %}"> Order History</a></li>
         </ul>
-    </nav>
+      </li>
+    </div>
+       
+    <div class="w3-hover-teal">
+      <li> <a href="{% url 'profile' %}"> <div class="link"><i class="fa fa-address-card-o"></i>Profile</div> </a> </li>
+    </div>
+    <div class="w3-hover-teal">
+      <li> <a href="{% url 'portfolio' %}"> <div class="link"><i class="fa fa-dollar"></i>Portfolio</div> </a> </li>
+    </div>
+    <div class="w3-hover-teal">
+      <li> <a href="{% url 'ranking' %}"> <div class="link"> <i class="fa fa-trophy"></i>Leaderboard</div> </a> </li>
+    </div>
+    <div class="w3-hover-teal">
+      <li> <a href="{% url 'About' %}"target="_blank"> <div class="link"><i class="fa fa-info-circle"></i>About</div> </a> </li>
+    </div>
 
+    <div class="w3-hover-teal">
+      <li> <a href="{% url 'FAQ'%}"target="_blank"> <div class="link"><i class="fa fa-question-circle"></i>FAQ</div> </a> </li>
+    </div>
+    <div class="w3-hover-teal">
+      <li> <a href="{% url 'credits' %}"target="_blank"> <div class="link"><i class="fa fa-phone"></i>Contact Us </div> </a> </li>
+    </div>
+
+    <div class="w3-hover-teal">
+      <li> <a href="{% url 'signout' %}"> <div class="link"><i class="fa fa-sign-out"></i>Sign Out</div> </a> </li>
+    </div>
+  </ul>
 </div>
-<div class="container">
-{% block content %}Nothing Here{% endblock %}
-</div>
 
-{% block head-javascript %}
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <!-- Popper.JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-    <!-- Bootstrap JS -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-    <script
-  src="https://code.jquery.com/jquery-3.3.1.js"
-  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-  crossorigin="anonymous"></script>
+<div id="main">
+  <div class="topnav" style="color: white;height: 40px;">
+  <button id="openNav" class="w3-button w3-xlarge" onclick="w3_open()" style="padding-top: 0px;">&#9776;</button>
+  <img src="{% static 'image/logo.png' %}" style="height: 45px; width: 220px;">
+    <div class="topnav-right" style="font-family: Helvetica;">
+      <a href="{% url 'About' %}"target="_blank">About </a>
+      <a href="{% url 'FAQ' %}"target="_blank">FAQ</a>
+    </div>
+  </div>
 
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-    
-    
-    <script type="text/javascript">
-    $(document).ready(function () {
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 
-    $('#sidebarCollapse').on('click', function () {
-        $('#sidebar').toggleClass('active');
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  
+  <div class="w3-container">
+  {% block content %}
+  {% endblock %}
+  </div>
+
+
+
+  <script>
+      $(document).ready(function(){
+      $(".nav-pills a").click(function(){
+        $(this).tab('show');
+      });
+      $('.nav-pills a').on('shown.bs.tab', function(event){
+        var x = $(event.target).text();         // active tab
+        var y = $(event.relatedTarget).text();  // previous tab
+        $(".act span").text(x);
+        $(".prev span").text(y);
+      });
+    });
+   
+      $(function() {
+        var Accordion = function(el, multiple) {
+        this.el = el || {};
+        this.multiple = multiple || false;
+        // Variables privadas
+        var links = this.el.find('.link');
+        // Evento
+        links.on('click', {el: this.el, multiple: this.multiple}, this.dropdown)
+      }
+    Accordion.prototype.dropdown = function(e) {
+        var $el = e.data.el;
+            $this = $(this),
+            $next = $this.next();
+        $next.slideToggle();
+        $this.parent().toggleClass('open');
+        if (!e.data.multiple) {
+            $el.find('.submenu').not($next).slideUp().parent().removeClass('open');
+        };
+      }   
+    var accordion = new Accordion($('#accordion'), false);
     });
 
-});
-</script>
-{% endblock %}
+    function w3_open() {
+      document.getElementById("main").style.marginLeft = "15em";
+      document.getElementById("mySidebar").style.width = "15em";
+      document.getElementById("mySidebar").style.display = "block";
+      document.getElementById("openNav").style.display = 'none';
 
+    }
+    function w3_close() {
+      document.getElementById("main").style.marginLeft = "0%";
+      document.getElementById("mySidebar").style.display = "none";
+      document.getElementById("openNav").style.display = "inline-block";
+    }
+  </script>
 </body>
+
 </html>

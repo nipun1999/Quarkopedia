@@ -1,0 +1,96 @@
+﻿{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Disclaimer</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+  <style>
+#more {display: none;}
+#mybtn {
+  
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  padding: 2px;
+  width: 50px;
+  height: 50px;
+  border-radius: 4px;
+}
+
+#mybtn:hover {
+  background-color: #555;
+}
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 5px 5px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: none;
+  color: white;
+}
+
+/* Add a color to the active/current link */
+
+/* Right-aligned section inside the top navigation */
+.topnav-right {
+  float: right;
+}
+ 
+</style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+   
+    <ul class="nav navbar-nav" style="height: 0.5em;">
+      <li style="float: left;"><img src="{% static 'image/logo.png' %}" style="height: 45px; width: 220px;"></li>
+    </ul>
+ 
+  </div>
+</nav>
+
+  
+<div class="container">
+  <div class="col-lg-12">
+  <div class="jumbotron text-center" style="background-color: teal; color: white;">
+  <h2>DISCLAIMER</h2>
+</div>
+ <h3>
+  All the information on this website is published in good faith and for general information purpose only. Website Name does not make any warranties about the completeness, reliability and accuracy of this information. Any action you take upon the information you find on this website (quarkopedia.in), is strictly at your own risk. will not be liable for any losses and/or damages in connection with the use of our website.
+  </h3>
+  <h3>
+From our website, you can visit other websites by following hyperlinks to such external sites. While we strive to provide only quality links to useful and ethical websites, we have no control over the content and nature of these sites. These links to other websites do not imply a recommendation for all the content found on these sites. Site owners and content may change without notice and may occur before we have the opportunity to remove a link which may have gone ‘bad'.
+</h3>
+<h3>
+Please be also aware that when you leave our website, other sites may have different privacy policies and terms which are beyond our control. Please be sure to check the Privacy Policies of these sites as well as their "Terms of Service" before engaging in any business or uploading any information.
+</h3>
+<h3>
+The names, characters, businesses, places, events and locales are either the products of the author's imagination or used in a fictitious manner. Any resemblance to actual persons, living or dead, or actual events is purely coincidental.
+</h3>
+</div>
+</div>
+
+</body>
+</html>
+

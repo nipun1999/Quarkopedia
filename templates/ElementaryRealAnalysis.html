@@ -1,0 +1,213 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load staticfiles %}
+  <title>ElementaryRealAnalysis</title>
+  
+ <style>
+ table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;}
+  
+  th
+  {
+    padding: 50px;
+  }
+  img {
+  max-width: 95%;
+  height: auto;
+}
+#mybtn {
+  
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  padding: 2px;
+  width: 50px;
+  height: 50px;
+  border-radius: 4px;
+}
+
+#mybtn:hover {
+  background-color: #555;
+}
+
+ </style>
+<body>
+ <button onclick="topFunction()" id="mybtn" title="Go to top"><i class="fa fa-angle-double-up" style="font-size:36px"></i></button>
+
+
+    
+    <div class="col-lg-12">
+        <div class="jumbotron text-center" style="background-color: teal; color: white;">
+            <h2>M.SC. MATHEMATICS</h2>
+            </div>
+            
+            <OL style="margin-left: 25px;">
+                    <h3><li><b>ELEMANTARY REAL ANALYTICS</b>:-</li></h3>
+                        
+                            <ol type="a">
+                                <LI><h6>Stock Prices: 281.65</h6></LI>
+                                <li><h6>Volume traded- 54,52,405</h6></li>
+                            <li>Course IC:-</li><h4><b>Devansh Sahu</b></h4>
+                                <h5>Qualification</h5>
+                                <ul style="list-style-type:circle">
+                                    <li>PhD. (Mathematics, 2010), Indian Institute of Technology Madras, India| Thesis Title: Regularization Techniques in Learning Theory|PhD Supervisor: Prof. Arindama Singh </li>
+                                    <li>M.Sc.(Mathematics, 2004), Utkal University, Orissa, India .</li>
+                                    <li>B.Sc.(Mathematics, 2002), Dhenkanal College, Orissa, India</li>
+                                
+                                </ul>
+                                <h5>Teaching interest:</h5>
+                                <ul type="circle">
+                                <li><p>He did his PhD thesis on Regularization Techniques in Learning Theory. He has given tight bound and proved consistency for the learning problems using Tikhonov and Lavrentiev regularization techniques. He has joined in the Department of Mathematics, BITS-Pilani KK Birla Goa Campus in 2009. His main research work is to find best error.bound for the learning problem by specifying the loss function and the space in which the problem defined. </p></li>
+                                </ul></li>
+                                <h5>About:</h5>
+                                <ul type="circle">
+                                    <li>Real-time analytics is a term used to refer to analytics that are able to be accessed as they come into a system. In general, the term analytics is used to define data patterns that provide meaning to a business or other entity, where analysts collect valuable information by sorting through and analyzing that data.</li>
+                                </ul>
+                                <li>The below graphs show the past one year's price data.</li>
+                                <img src="{% static 'image/ITC.PNG'%}" width="800px" height="600px">
+                                <img src="{% static 'image/ITC candlestick.PNG'%}" width="800px" height="600px">
+                                <li>Placements:-</li>
+                                <div style="overflow-x:auto;">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <td>Year</td>
+                                                <td>Total Registered</td>
+                                                <td>% Placed</td>
+                                                <td>Average CTC(LPA)</td>
+                                                <td>Median CTC(LPA)</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>2014</td>
+                                                <td>25</td>
+                                                <td>52.00%</td>
+                                                <td>6.58</td>
+                                                <td>6.93</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2015</td>
+                                                <td>30</td>
+                                                <td>53.33%</td>
+                                                <td>6.65</td>
+                                                <td>6.98</td>
+                                            </tr>
+                                            <tr>
+                                                    <td>2016</td>
+                                                    <td>39</td>
+                                                    <td>53.85%</td>
+                                                    <td>8.34</td>
+                                                    <td>8.50</td>
+                                            </tr>
+                                            <tr>
+                                                    <td>2017</td>
+                                                    <td>42</td>
+                                                    <td>61.90%</td>
+                                                    <td>9.98</td>
+                                                    <td>10.34</td>
+                                            </tr>
+                                            <tr>
+                                                    <td>2018</td>
+                                                    <td>53</td>
+                                                    <td>64.15%</td>
+                                                    <td>10.93</td>
+                                                    <td>11.12</td>
+                                            </tr>
+                      
+                                        </tbody>
+                                    </table></li>
+                                    </div>
+                                    <li><big><u>Average CG:</u></big>
+                                        <table class="table table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <td>Year</td>
+                                                    <td>Average CG</td>
+                                                   
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>2014</td>
+                                                    <td>6.39</td>
+                      
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>2015</td>
+                                                        <td>6.53</td>
+                                                </tr>
+                                                <tr>
+                                                        <td>2016</td>
+                                                        <td>6.47</td>
+                      
+                                                        
+                                                </tr>
+                                                <tr>
+                                                    <td>2017</td>
+                                                    <td>6.77</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2018</td>
+                                                    <td>6.43</td>
+                                                </tr>
+                                                
+                                                
+                                                
+                      
+                                            </tbody>
+                                        </li>
+                                    </table>
+                                </li>
+                            </ol>
+                </ol>
+                </li>
+                    
+                    
+                
+                        </li>
+                
+                </li>
+
+                    </li>
+                </ol>
+               
+                </li>
+            </ol>
+
+          </div>
+          
+            
+          </div>
+        
+      </div>
+
+<script type="text/javascript">
+    window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("mybtn").style.display = "block";
+  } else {
+    document.getElementById("mybtn").style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+</script>
+      {% endblock %}

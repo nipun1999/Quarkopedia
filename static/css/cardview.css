@@ -1,0 +1,23 @@
+.card{
+    -webkit-box-shadow: 6px 6px 1px 0.5px black;
+    -moz-box-shadow: 6px 6px 1px 0.5px black;
+    box-shadow: 2px 2px 1px 0.5px black;
+    border-radius: 0px;
+    padding: 0px;
+    margin-bottom:10px;
+    width: 80%;
+}
+
+.card h5{
+    margin:5px;    
+}
+
+
+.card h4{
+    padding: 0;
+    margin-left: 0;
+    align-self: left;
+    align-content: left;
+    
+}
+

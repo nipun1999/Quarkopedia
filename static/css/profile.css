@@ -1,0 +1,67 @@
+body{
+    background-image: linear-gradient( rgb(88, 70, 248), rgb(173, 216, 252));
+}
+.emp-profile{
+    padding: 3%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    border-radius: 0.5rem;
+    background: white;
+}
+.profile-img{
+    text-align: center;
+}
+.profile-img img{
+    width: 60%;
+    height: 30%;
+}
+
+.profile-head h5{
+    color: black;
+    font-size: 25px;
+}
+.profile-head h6{
+    color:  darkcyan;
+}
+.profile-head label{
+    color:  darkcyan;
+    font-weight: 600;
+    font-size: 17px;
+}
+.profile-head p{
+    font-size: 17px;
+}
+.profile-rating{
+    font-size: 15px;
+    color: grey;
+    font-weight: 400;
+}
+.profile-rating span{
+    color: grey;
+    font-size: 15px;
+    font-weight: 600;
+}
+.nav-pills a {
+    display: inline-block;
+    color: darkgray;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+    font-size: 17px;
+    border-radius: 5px;
+  }
+  
+  .nav-pills a:hover {
+    background-color: #ddd;
+    color: darkturquoise;
+  }
+  
+  .nav-pills a.active {
+    background-color: dodgerblue;
+    color: white;
+  }
+  .tab-content{
+      margin-top: 5%;
+      margin-left: 0; 
+    
+  }

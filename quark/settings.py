@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'c$wzm6lindhp1)z91843*4&t1_%vnpgf8%v%wdh)6#8h2vt@#^'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','.herokuapp.com']
+ALLOWED_HOSTS = ['quarkopediatesting.us-east-2.elasticbeanstalk.com', '127.0.0.1']
 
 
 # Application definition
@@ -47,7 +47,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'quark.urls'
@@ -106,7 +105,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Calcutta'
 
 USE_I18N = True
 
@@ -124,3 +123,13 @@ STATICFILES_DIRS = (
 )
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+#Celery Settings
+#CELERY_BROKER_URL = 'sqs://AKIAIHASCW4KHBGESYJQ:6i+ECz2nMFHHjGV1eGZviHKaRRLr1j3Q1e5o50RV@'
+
+#CELERY_broker_transport_options = {'region': 'us-east-2'}
+
+#CELERY_broker_transport_options = {'queue_name_prefix': 'celery-'}
+
+
+

@@ -1,18 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <title> Ranking</title>
-</head>
-<body>
+{% extends 'base.html' %}
 
-    <h1> Rankings</h1>
+{% block content%}
+<title> Leaderboard </title>
+<h1 style="color:black;font-family: Raleway;"> Leaderboard </h1>
+<h4 class="text-center text-muted" style="font-family: Raleway;"> RANKS UPDATE EVERYDAY AFTER 5PM  </h4>
 
-    
-    
-    
-<table class="table table-dark">
-{% for d in new_ranklist %}
+<table class="table">
   <thead>
     <tr>
       <th scope="col">Rank</th>
@@ -20,23 +13,19 @@
       <th scope="col">Amount</th>
     </tr>
   </thead>
- <tbody>
-    <tr>
-      <th scope="row">{{ d['name'] }}</th>
+
+  
+  <tbody>
+    {% for d in ranklist %}
+    <tr style="background-color: #CCDBDC;">
+      <th scope="row">{{ d.rank }}</th>
       <td>{{ d.name }}</td>
-      <td>{{ d.accBal }}</td>
-      
+      <td>{{ d.userValue }}</td>
     </tr>
-    
+    {% endfor %}
   </tbody>
-{% endfor %}
+  
 </table>
 
-
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-
-</body>
-</html>
+{% endblock %}
 

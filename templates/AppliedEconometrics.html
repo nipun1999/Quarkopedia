@@ -1,0 +1,169 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load staticfiles %}
+  <title>AppliedEconometrics</title>
+  
+ <style>
+ table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;}
+  
+  th
+  {
+    padding: 50px;
+  }
+  img {
+  max-width: 95%;
+  height: auto;
+}
+#mybtn {
+  
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  padding: 2px;
+  width: 50px;
+  height: 50px;
+  border-radius: 4px;
+}
+
+#mybtn:hover {
+  background-color: #555;
+}
+ </style>
+<body>
+   <button onclick="topFunction()" id="mybtn" title="Go to top"><i class="fa fa-angle-double-up" style="font-size:36px"></i></button>
+    <div class="col-lg-12">
+        <div class="jumbotron text-center" style="background-color: teal; color: white;">
+  <h2>M.Sc. ECONOMICS</h2>
+</div>
+<OL style="margin-left: 25px;">
+    <h3> <LI><b>APPLIED ECONOMETRICS</b>:-</LI></h3>
+	  <ol type="a">
+	  <li>Stock price:- 295.90</li>
+	  <li>Volume traded:- 95,26,067</li>
+      <li>Course IC:-</li><h4><b>Dr. Kriti Mittal</b></h4>
+	  <h5>Qualifications</h5>
+	  <ul style="list-style-type:circle">
+	  <li>	Ph.D., NKCCDS, Bhubaneswar (An ICSSR Institute) affiliated to Utkal University(2009)</li>
+	  <li>Life-time Member of the Indian Econometric Society (TIES)</li>
+    <li>Member of Chronic Poverty Advisory Network</li>
+    <li>Life-time Member of Indian Association for Research in National Income & Wealth</li>
+    <li>His current areas of research include economic inequality and economic mobility, industrial organization, behavioral economics, price discovery in agricultural market.</li>
+    </ul>
+    <li>About:</li>
+    <ul type="circle"><li>Econometrics is the application of statistical methods to economic data in order to give empirical content to economic relationships. More precisely, it is the quantitative analysis of actual economic phenomena based on the concurrent development of theory and observation, related by appropriate methods of inference.</li></ul>
+    <li>The below graphs show the past one year's price data.</li>
+    <img src="{% static 'image/SBI.PNG'%}" width="800px" height="600px">
+    <img src="{% static 'image/SBI candlestick.png'%}" width="800px" height="600px">
+      <li>Placement:-</li>
+      <div style="overflow-x:auto;">
+	  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Year</th>
+        <th>Total Registered</th>
+        <th>%Placed</th>
+		<th>Average CTC(LPA)</th>
+		<th>Median CTC(LPA)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>2014</td>
+        <td>27</td>
+		<td>55.56%</td>
+		<td>7.88</td>
+		<td>8.14</td>
+      </tr>
+	  <tr>
+        <td>2015</td>
+        <td>36</td>
+		<td>58.33%</td>
+		<td>8.25</td>
+		<td>8.58</td>
+      </tr>
+	  <tr>
+        <td>2016</td>
+        <td>40</td>
+		<td>55%</td>
+		<td>8.54</td>
+		<td>8.46</td>
+      </tr>
+	  <tr>
+        <td>2017</td>
+        <td>47</td>
+		<td>57.45%</td>
+		<td>9.78</td>
+		<td>10.14</td>
+      </tr>
+	  <tr>
+        <td>2018</td>
+        <td>54</td>
+		<td>62.96%</td>
+		<td>10.73</td>
+		<td>11.02</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+  <li>Average CG:-</li>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Year</th>
+        <th>Avreage CG</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>2014</td>
+        <td>7.09</td>
+      </tr>
+	  <tr>
+        <td>2015</td>
+        <td>7.23</td>
+      </tr>
+	  <tr>
+        <td>2016</td>
+        <td>7.17</td>
+	  <tr>
+        <td>2017</td>
+        <td>7.20</td>
+      </tr>
+	  <tr>
+        <td>2018</td>
+        <td>7.23</td>
+      </tr>
+    </tbody>
+  </table>
+  </ol>
+  </OL>
+  </div>
+  <script type="text/javascript">
+    window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("mybtn").style.display = "block";
+  } else {
+    document.getElementById("mybtn").style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+</script>
+{%endblock%}
