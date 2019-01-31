@@ -47,6 +47,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'quark.urls'
@@ -128,7 +129,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 #CELERY_BROKER_URL = 'sqs://AKIAIHASCW4KHBGESYJQ:6i+ECz2nMFHHjGV1eGZviHKaRRLr1j3Q1e5o50RV@'
 
 #CELERY_broker_transport_options = {'region': 'us-east-2'}
-
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 #CELERY_broker_transport_options = {'queue_name_prefix': 'celery-'}
 
 
