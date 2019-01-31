@@ -3,12 +3,12 @@ import time
 from threading import Thread
 
 config = {
-    'apiKey': "AIzaSyDS_XIGRfuaSIwTQbwWF_nSdVlXdM6uvyY",
-    'authDomain': "quarkstocksapp.firebaseapp.com",
-    'databaseURL': "https://quarkstocksapp.firebaseio.com",
-    'projectId': "quarkstocksapp",
-    'storageBucket': "quarkstocksapp.appspot.com",
-    'messagingSenderId': "779348030725"
+    'apiKey': "AIzaSyAqsYNzM3h74CDciLhKvQXaph5-VcdeG-4",
+    'authDomain': "quark-o-pedia.firebaseapp.com",
+    'databaseURL': "https://quark-o-pedia.firebaseio.com",
+    'projectId': "quark-o-pedia",
+    'storageBucket': "quark-o-pedia.appspot.com",
+    'messagingSenderId': "794989305019"
 }
 
 firebase = pyrebase.initialize_app(config)  
