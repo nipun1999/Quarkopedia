@@ -9,7 +9,7 @@ from authy.api import AuthyApiClient
 from django.conf import settings
 
 config = {
-	'apiKey': "AIzaSyAqsYNzM3h74CDciLhKvQXaph5-VcdeG-4",
+    'apiKey': "AIzaSyAqsYNzM3h74CDciLhKvQXaph5-VcdeG-4",
     'authDomain': "quark-o-pedia.firebaseapp.com",
     'databaseURL': "https://quark-o-pedia.firebaseio.com",
     'projectId': "quark-o-pedia",
@@ -121,7 +121,7 @@ def ranking(request):
 
 
 def home(request):
-	return render(request, 'homepage.html', {"e":'sukdik'})
+    return render(request, 'homepage.html', {"e":'sukdik'})
 
 def news(request):
     if user_id is None:
@@ -172,8 +172,8 @@ def signUp(request):
                              
             if "@goa.bits-pilani.ac.in" in email:
                 user=auth.create_user_with_email_and_password(email,passw)
-				user = auth.refresh(user['refreshToken'])
-				user_id = auth.get_account_info(user['idToken'])['users'][0]['localId']
+                user = auth.refresh(user['refreshToken'])
+                user_id = auth.get_account_info(user['idToken'])['users'][0]['localId']
                 uid = user['localId']
                 data={'name':name,'email':email,'phone': phone, 'college':college,'city':city,'accBal': DEFAULT_BAL, 'rank': 0,'user_verify':"Yes",'userVal':DEFAULT_BAL}
                 database.child("users").child(uid).set(data)
