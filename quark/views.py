@@ -172,8 +172,6 @@ def signUp(request):
                              
             if "@goa.bits-pilani.ac.in" in email:
                 user=auth.create_user_with_email_and_password(email,passw)
-                user = auth.refresh(user['refreshToken'])
-                user_id = auth.get_account_info(user['idToken'])['users'][0]['localId']
                 uid = user['localId']
                 data={'name':name,'email':email,'phone': phone, 'college':college,'city':city,'accBal': DEFAULT_BAL, 'rank': 0,'user_verify':"Yes",'userVal':DEFAULT_BAL}
                 database.child("users").child(uid).set(data)
@@ -195,6 +193,11 @@ def signUp(request):
                 return render(request,"verification.html")
         message="could not create account"
         return render(request,'signUp.html', {"message":message})
+
+            
+        
+        
+        	
 
     return render(request,"signUp.html")
 
